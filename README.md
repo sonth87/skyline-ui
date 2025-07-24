@@ -1,10 +1,19 @@
 # skyline/ui
 base on [Radix UI](https://www.radix-ui.com/), [Shadcn UI](https://ui.shadcn.com/) and [Tailwind CSS](https://tailwindcss.com/).
 
+package manager: [pnpm](https://pnpm.io/) or [yarn](https://yarnpkg.com/)
+
+package manager version: [pnpm@10.4.1](https://pnpm.io/), [yarn@4.9.2](https://yarnpkg.com/)
+
+
 ## Installation
 
 ```bash
 pnpm i @skyline/ui @skyline/styles lucide-react
+```
+
+```bash
+yarn add @skyline/ui @skyline/styles lucide-react
 ```
 
 

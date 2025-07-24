@@ -167,7 +167,14 @@ export {
   FormField,
 };
 
-export const Form = Object.assign(FormRoot, {
+export const Form: typeof FormRoot & {
+  Item: typeof FormItem;
+  Label: typeof FormLabel;
+  Control: typeof FormControl;
+  Description: typeof FormDescription;
+  Message: typeof FormMessage;
+  Field: typeof FormField;
+} = Object.assign(FormRoot, {
   Item: FormItem,
   Label: FormLabel,
   Control: FormControl,

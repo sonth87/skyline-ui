@@ -8,7 +8,7 @@
     "clean": "turbo run clean && rimraf node_modules .turbo",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "version-packages": "changeset version",
-    "release": "yarn build --filter=\"./packages/*\" && changeset publish",
+    "release": "pnpm run build --filter=\"./packages/*\" && changeset publish",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -19,7 +19,7 @@
     "@commitlint/cz-commitlint": "^17.8.1",
     "@skyline/eslint-config": "workspace:*",
     "commitizen": "^4.3.0",
-    "eslint": "^8.52.0",
+    "eslint": "^9.31.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
@@ -31,7 +31,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "vitest related --run --bail",
-      "bash -c 'yarn lint'",
+      "bash -c 'pnpm lint'",
       "prettier -w"
     ],
     "*.{md,json}": [
@@ -49,7 +49,7 @@
       "apps/*"
     ]
   },
-  "packageManager": "yarn@4.9.2",
+  "packageManager": "pnpm@10.4.1",
   "dependencies": {
     "lucide-react": "^0.525.0"
   }

@@ -1,7 +1,7 @@
 {
   "extends": [
-    "@skyline/eslint-config/react",
-    "@skyline/eslint-config/tailwind"
+    "@skyline/eslint-config/react"
+    // "@skyline/eslint-config/tailwind"
   ],
   "ignorePatterns": ["dist"]
 }

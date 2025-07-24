@@ -7,13 +7,13 @@
     "start": "serve dist",
     "preview-storybook": "serve dist",
     "clean": "rimraf .turbo dist node_modules",
-    "lint": "eslint src --fix --max-warnings 0"
+    "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\" --fix --max-warnings 0"
   },
   "dependencies": {
     "@skyline/ui": "workspace:*",
     "lucide-react": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19",
+    "react-dom": "^19",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -29,8 +29,8 @@
     "@storybook/blocks": "^7.5.1",
     "@storybook/react": "^7.5.1",
     "@storybook/react-vite": "^7.5.1",
-    "@types/react": "^18.2.32",
-    "@types/react-dom": "^18.2.14",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^4.1.0",
     "autoprefixer": "^10.4.16",
     "eslint-plugin-storybook": "^0.6.15",

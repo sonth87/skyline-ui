@@ -302,7 +302,7 @@
     "build": "tsup && npm run build:css",
     "build:css": "postcss src/styles/*.css --dir dist/styles",
     "dev": "tsup --watch",
-    "lint": "eslint src --fix --max-warnings 0",
+    "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\" --fix --max-warnings 0",
     "format": "prettier --write src",
     "clean": "rimraf .turbo node_modules dist"
   },

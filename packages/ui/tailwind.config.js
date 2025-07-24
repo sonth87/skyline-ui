@@ -1,4 +1,4 @@
-import { defineTailwindConfig } from "./src/lib/twconfig";
+import { defineTailwindConfig } from "@skyline/styles";
 
 /** @type {import('tailwindcss').Config} */
 const config = defineTailwindConfig({});

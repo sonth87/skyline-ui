@@ -25,6 +25,13 @@
     "eslint-config-typescript-react-nextjs",
     "eslint-config-typescript-react"
   ],
+  "exports": {
+    "./base": "./base.js",
+    "./next": "./next.js",
+    "./react": "./react.js",
+    "./node": "./node.js",
+    "./tailwind": "./tailwind.js"
+  },
   "dependencies": {
     "@next/eslint-plugin-next": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
