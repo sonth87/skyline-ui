@@ -1,0 +1,3 @@
+{
+  "extends": "@skyline/tsconfig/react.json"
+}

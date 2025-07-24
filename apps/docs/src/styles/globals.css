@@ -1,0 +1,9 @@
+/* @import "@skyline/styles/theme.css" layer(theme); */
+@import "@skyline/ui/theme.css" layer(theme);
+@import "@skyline/ui/styles/theme.css" layer(theme);
+@import "@skyline/ui/globals.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

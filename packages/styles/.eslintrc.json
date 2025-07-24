@@ -1,0 +1,3 @@
+{
+  "extends": ["@skyline/eslint-config/node"]
+}
