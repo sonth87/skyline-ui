@@ -7,6 +7,7 @@ import { tv } from "@skyline/styles";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 import { Text } from "./text";
+import { cn } from "../lib/utils";
 
 export const SelectStyles = {
   Trigger: tv({
@@ -78,30 +79,38 @@ const SelectGroup = SelectPrimitive.Group;
 type SelectValueProps = SelectPrimitive.SelectValueProps;
 const SelectValue = SelectPrimitive.Value;
 
-type SelectTriggerProps = Omit<
-  SelectPrimitive.SelectTriggerProps,
-  "children"
-> & {
+type SelectTriggerProps = SelectPrimitive.SelectTriggerProps & {
   placeholder?: string;
+  iconClassName?: string;
 };
 
 const SelectTrigger = forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   SelectTriggerProps
->(({ className, placeholder, ...props }, ref) => (
+>(({ className, iconClassName, placeholder, children, ...props }, ref) => (
   <SelectPrimitive.Trigger
     ref={ref}
     className={SelectStyles.Trigger({ className })}
     {...props}
   >
-    <SelectValue
-      placeholder={<Text className="text-muted-foreground">{placeholder}</Text>}
-    />
+    {children || (
+      <SelectValue
+        placeholder={
+          <Text className="text-muted-foreground">{placeholder}</Text>
+        }
+      />
+    )}
     <SelectPrimitive.Icon asChild>
-      <ChevronDown className="h-4 w-4 opacity-50 transition-transform duration-200 group-aria-expanded:rotate-180" />
+      <ChevronDown
+        className={cn(
+          "h-4 w-4 opacity-50 transition-transform duration-200 group-aria-expanded:rotate-180",
+          iconClassName
+        )}
+      />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
+SelectTrigger.displayName = "SelectTrigger";
 
 type SelectContentProps = SelectPrimitive.SelectContentProps;
 
@@ -133,6 +142,7 @@ const SelectContent = forwardRef<
     </SelectPrimitive.Content>
   </SelectPrimitive.Portal>
 ));
+SelectContent.displayName = "SelectContent";
 
 type SelectLabelProps = SelectPrimitive.SelectLabelProps;
 
@@ -146,6 +156,7 @@ const SelectLabel = forwardRef<
     {...props}
   />
 ));
+SelectLabel.displayName = "SelectLabel";
 
 type SelectItemProps = SelectPrimitive.SelectItemProps;
 
@@ -167,6 +178,7 @@ const SelectItem = forwardRef<
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
   </SelectPrimitive.Item>
 ));
+SelectItem.displayName = "SelectItem";
 
 type SelectSeparatorProps = SelectPrimitive.SelectSeparatorProps;
 
@@ -180,6 +192,7 @@ const SelectSeparator = forwardRef<
     {...props}
   />
 ));
+SelectSeparator.displayName = "SelectSeparator";
 
 type SelectProps = SelectPrimitive.SelectProps;
 

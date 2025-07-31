@@ -84,6 +84,31 @@
       "import": "./dist/components/command.mjs",
       "require": "./dist/components/command.js"
     },
+    "./combobox": {
+      "types": "./dist/components/combobox.d.ts",
+      "import": "./dist/components/combobox.mjs",
+      "require": "./dist/components/combobox.js"
+    },
+    "./floating-input": {
+      "types": "./dist/components/floating-input.d.ts",
+      "import": "./dist/components/floating-input.mjs",
+      "require": "./dist/components/floating-input.js"
+    },
+    "./floating-label": {
+      "types": "./dist/components/floating-label.d.ts",
+      "import": "./dist/components/floating-label.mjs",
+      "require": "./dist/components/floating-label.js"
+    },
+    "./floating-select": {
+      "types": "./dist/components/floating-select.d.ts",
+      "import": "./dist/components/floating-select.mjs",
+      "require": "./dist/components/floating-select.js"
+    },
+    "./floating-combobox": {
+      "types": "./dist/components/floating-combobox.d.ts",
+      "import": "./dist/components/floating-combobox.mjs",
+      "require": "./dist/components/floating-combobox.js"
+    },
     "./context-menu": {
       "types": "./dist/components/context-menu.d.ts",
       "import": "./dist/components/context-menu.mjs",
